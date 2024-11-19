@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Disease Prediction Survey</h1>
+        <form id="surveyForm">
+            <label>How often do you feel chest pain? (0: Never, 3: Always)</label>
+            <select name="cp" required>
+                <option value="0">Never</option>
+                <option value="1">Rarely</option>
+                <option value="2">Sometimes</option>
+                <option value="3">Always</option>
+            </select>
+            <label>Rate your exercise tolerance (0: Poor, 2: Excellent)</label>
+            <select name="slope" required>
+                <option value="0">Poor</option>
+                <option value="1">Average</option>
+                <option value="2">Excellent</option>
+            </select>
+            <!-- Add more Likert-scale questions for other inputs -->
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
