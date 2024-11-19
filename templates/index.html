@@ -10,20 +10,120 @@
     <div class="container">
         <h1>Heart Disease Prediction Survey</h1>
         <form id="surveyForm">
-            <label>How often do you feel chest pain? (0: Never, 3: Always)</label>
-            <select name="cp" required>
-                <option value="0">Never</option>
-                <option value="1">Rarely</option>
-                <option value="2">Sometimes</option>
-                <option value="3">Always</option>
+            <!-- Age -->
+            <label for="age">Rate your age group (1: Young, 5: Elderly)</label>
+            <select id="age" name="age" required>
+                <option value="1">Young</option>
+                <option value="2">Below Middle Age</option>
+                <option value="3">Middle Age</option>
+                <option value="4">Above Middle Age</option>
+                <option value="5">Elderly</option>
             </select>
-            <label>Rate your exercise tolerance (0: Poor, 2: Excellent)</label>
-            <select name="slope" required>
-                <option value="0">Poor</option>
-                <option value="1">Average</option>
-                <option value="2">Excellent</option>
+
+            <!-- Sex -->
+            <label for="sex">Select your gender (0: Female, 1: Male)</label>
+            <select id="sex" name="sex" required>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
             </select>
-            <!-- Add more Likert-scale questions for other inputs -->
+
+            <!-- Chest Pain Type -->
+            <label for="cp">How often do you feel chest pain? (1: Never, 5: Always)</label>
+            <select id="cp" name="cp" required>
+                <option value="1">Never</option>
+                <option value="2">Rarely</option>
+                <option value="3">Sometimes</option>
+                <option value="4">Often</option>
+                <option value="5">Always</option>
+            </select>
+
+            <!-- Resting Blood Pressure -->
+            <label for="trestbps">Rate your blood pressure level (1: Normal, 5: Very High)</label>
+            <select id="trestbps" name="trestbps" required>
+                <option value="1">Normal</option>
+                <option value="2">Slightly Elevated</option>
+                <option value="3">Moderately Elevated</option>
+                <option value="4">High</option>
+                <option value="5">Very High</option>
+            </select>
+
+            <!-- Cholesterol -->
+            <label for="chol">How healthy is your diet? (1: Very Unhealthy, 5: Very Healthy)</label>
+            <select id="chol" name="chol" required>
+                <option value="1">Very Unhealthy</option>
+                <option value="2">Unhealthy</option>
+                <option value="3">Neutral</option>
+                <option value="4">Healthy</option>
+                <option value="5">Very Healthy</option>
+            </select>
+
+            <!-- Fasting Blood Sugar -->
+            <label for="fbs">Have you been diagnosed with high fasting blood sugar? (0: No, 1: Yes)</label>
+            <select id="fbs" name="fbs" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- Resting ECG -->
+            <label for="restecg">Rate your ECG results (0: Normal, 2: Abnormal)</label>
+            <select id="restecg" name="restecg" required>
+                <option value="0">Normal</option>
+                <option value="1">ST-T Abnormalities</option>
+                <option value="2">Left Ventricular Hypertrophy</option>
+            </select>
+
+            <!-- Maximum Heart Rate -->
+            <label for="thalach">Rate your exercise tolerance (1: Poor, 5: Excellent)</label>
+            <select id="thalach" name="thalach" required>
+                <option value="1">Poor</option>
+                <option value="2">Below Average</option>
+                <option value="3">Average</option>
+                <option value="4">Good</option>
+                <option value="5">Excellent</option>
+            </select>
+
+            <!-- Exercise-Induced Angina -->
+            <label for="exang">Do you experience chest pain during exercise? (0: No, 1: Yes)</label>
+            <select id="exang" name="exang" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- ST Depression -->
+            <label for="oldpeak">Rate your stress levels (1: Very Low, 5: Very High)</label>
+            <select id="oldpeak" name="oldpeak" required>
+                <option value="1">Very Low</option>
+                <option value="2">Low</option>
+                <option value="3">Moderate</option>
+                <option value="4">High</option>
+                <option value="5">Very High</option>
+            </select>
+
+            <!-- Slope -->
+            <label for="slope">Rate your exercise peak slope (1: Poor, 3: Excellent)</label>
+            <select id="slope" name="slope" required>
+                <option value="1">Poor</option>
+                <option value="2">Average</option>
+                <option value="3">Excellent</option>
+            </select>
+
+            <!-- Major Vessels -->
+            <label for="ca">Rate your arterial health (0: Healthy, 3: Very Unhealthy)</label>
+            <select id="ca" name="ca" required>
+                <option value="0">Healthy</option>
+                <option value="1">Minor Issues</option>
+                <option value="2">Moderate Issues</option>
+                <option value="3">Very Unhealthy</option>
+            </select>
+
+            <!-- Thalassemia -->
+            <label for="thal">Rate your thalassemia condition (3: Normal, 7: Severe)</label>
+            <select id="thal" name="thal" required>
+                <option value="3">Normal</option>
+                <option value="6">Fixed Defect</option>
+                <option value="7">Reversible Defect</option>
+            </select>
+
             <button type="submit">Submit</button>
         </form>
         <div id="result"></div>
