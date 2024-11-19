@@ -25,16 +25,16 @@ document.getElementById('surveyForm').addEventListener('submit', async (event) =
 
         const result = await response.json();
 
-        // Display the prediction result
+        // Update the fixed result section
         document.getElementById('result').innerHTML = `
             <h2>Prediction Result</h2>
             <p><strong>${result.prediction}</strong></p>
             <p>Probability: <strong>${result.probability}</strong></p>
         `;
     } catch (error) {
-        // Display error message if something goes wrong
+        // Display error message
         document.getElementById('result').innerHTML = `
-            <p id="error">${error.message}</p>
+            <p style="color: red;">${error.message}</p>
         `;
     }
 });
